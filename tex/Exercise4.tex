@@ -26,12 +26,15 @@ As a reminder we restate Dale's law; \textit{for each neuron, synaptic connectio
 \paragraph*{}
 When E increases from 0 to 0.7, the mean maximal load decreases. After 0.7 it flattens out and then starts increasing again just before E $= 1$. E $=1$ means that all nodes are excitatory and therefore all weights positive as can be deduced from equation \ref{eq: weights}. As shown in figure \ref{fig: exercise 4}, we expect the mean maximal load to decrease as E increases. 
 
-Expecting all patterns $\xi_i$ being uniformly random and the weight matrix symmetric we expect for all $E$ and so for $E = \frac{1}{2}$ half the nodes to be cut.
-So the maximal available load should be $\alpha_{N,max} = 0.08$. 
+\paragraph*{}
+Because all patterns $\xi_i$ are completely random and the weight matrix symmetric we expect that half the nodes are cut for all E, and thus also for $E = \frac{1}{2}$.
+So the maximal available load should be $\alpha_{N,max} = 0.08$ as can be read from table \ref{tbl:exercise3_CI}. 
 
-But we find that is for E $= 0$ $\alpha_{N,max} = 0.10 $. Indeed we receive with this kind of weight cutting better results than with random weight cutting with $P_cut=0.5$  for $E \in [0 \ldots 0.4] $. For higher excitatory nodes parts (shares? anteile) we fall below these values. For E $ = 1$ the value (0.07) is bit lower than the random cut  value (0.075).
+\paragraph*{}
+In figure \ref{fig: exercise 4} we find a maximal values of $\alpha_{N,max} = 0.11 $ for $E=0$. We thus improve our network and find better results by enforcing Dale's law for the region $E \in [0 \ldots 0.4]$, compared to $p_{cut} =0.5$. For a higher share in excitatory nodes in the network, enforcing Dale's law becomes less efficient than cutting the weights using the method from exercise 3.For E $ = 1$ the $\alpha_{N,max}=0.065$ is slightly lower than the random cut  value of 0.075.
 
-This shows that a high excitatory (anteil) is worse than a random cut in same size but for low excitatory (anteile) it is better. So even if in more-realistic Hopfield neuron models Dale's Law is enforced and therefore weights are cut, it can better recover a random pattern.
+\paragraph*{}
+This shows that a high excitatory share in the nodes is worse than a random cut of the same size. For low excitatory shares, enforcing Dale's law is more effective than using randomly cut values. A Hopfield neuron model that includes Dale's law is thus not just more realistic but also more effective in recovering patterns. 
 
 
 	

@@ -4,7 +4,7 @@
 \small
 Set $c=0.1$, $N = 200$ and turn off random asymmetry ($p_{cut} = 0$). Set $E \in \l[0, 1\r]$ to be the percentage of excitatory nodes.
 
-For a given $E$, randomly split the network into an excitatory and an inhibitory subpopulation (of sizes $E \cdot N$ and $(1 - E) \cdot N$ respectively). Now enforce Dale's law on the network connectivity by setting '"disallowed"` connection weights in the standard Hebbian weight matrix Eq. 1 to zero.
+For a given $E$, randomly split the network into an excitatory and an inhibitory subpopulation (of sizes $E \cdot N$ and $(1 - E) \cdot N$ respectively). Now enforce Dale's law on the network connectivity by setting "disallowed" connection weights in the standard Hebbian weight matrix Eq. 1 to zero.
 
 What percentage of the directed connections do you expect to be cut for $E = \frac{1}{2}$
 As in Ex. 2 calculate and plot the mean $\alpha_{N,max}$ for varying E with error bars (at least 10 repetitions). Interpret the results and compare the value for E$ = 1$ to your result from Ex. 3.
@@ -12,7 +12,7 @@ As in Ex. 2 calculate and plot the mean $\alpha_{N,max}$ for varying E with erro
 
 \paragraph*{}
 
-As a reminder we restate Dale's law; \textit{for each neuron, synaptic connections to postsynaptic neurons are either of the excitatory or inhibitory type, never both} (Execise Sheet).
+As a reminder we restate Dale's law; \textit{for each neuron, synaptic connections to postsynaptic neurons are either of the excitatory or inhibitory type, never both} (Exercise Sheet).
 
 \begin{figure}[H]
   \begin{center}
@@ -20,14 +20,21 @@ As a reminder we restate Dale's law; \textit{for each neuron, synaptic connectio
   \end{center}
   \vspace{-20pt}
   \caption{Exercise 4: Mean maximal load over different E}
-  \label{fig: e}
+  \label{fig: exercise 4}
 \end{figure}
 
 \paragraph*{}
-When E increases from 0 to 0.7, the mean maximal load decreases. After 0.7 it flattens out and then starts increasing again just before E$= 1$. E$=1$ means that all nodes are excitatory and therefore all weights positive as can be deduced from equation \ref{eq: weights}. As shown in figure \ref{fig
+When E increases from 0 to 0.7, the mean maximal load decreases. After 0.7 it flattens out and then starts increasing again just before E $= 1$. E $=1$ means that all nodes are excitatory and therefore all weights positive as can be deduced from equation \ref{eq: weights}. As shown in figure \ref{fig: exercise 4}, we expect the mean maximal load to decrease as E increases. 
 
-As for all $E$ so for $E = \frac{1}{2}$ we expect half the nodes to be cut.
+\paragraph*{}
+Because all patterns $\xi_i$ are completely random and the weight matrix symmetric we expect that half the nodes are cut for all E, and thus also for $E = \frac{1}{2}$.
+So the maximal available load should be $\alpha_{N,max} = 0.08$ as can be read from table \ref{tbl:exercise3_CI}. 
 
+\paragraph*{}
+In figure \ref{fig: exercise 4} we find a maximal values of $\alpha_{N,max} = 0.11 $ for $E=0$. We thus improve our network and find better results by enforcing Dale's law for the region $E \in [0 \ldots 0.4]$, compared to $p_{cut} =0.5$. For a higher share in excitatory nodes in the network, enforcing Dale's law becomes less efficient than cutting the weights using the method from exercise 3.For E $ = 1$ the $\alpha_{N,max}=0.065$ is slightly lower than the random cut  value of 0.075.
+
+\paragraph*{}
+This shows that a high excitatory share in the nodes is worse than a random cut of the same size. For low excitatory shares, enforcing Dale's law is more effective than using randomly cut values. A Hopfield neuron model that includes Dale's law is thus not just more realistic but also more effective in recovering patterns. 
 
 
 	
