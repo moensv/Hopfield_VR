@@ -24,15 +24,16 @@ Note: Bare in mind that the convergence assertion of Question 1.1 does not neces
   \vspace{-10pt}
 \end{figure}
 
+The decrease in the mean maximal load seems to be nearly linear with its error in figure \ref{fig:exercise3} decreasing as $p_cut$ increases. The decrease in the error  can be explained through equation \ref{eq: sequential dynamics}, where a cutting of directed weights leads to a reduction of the possible extrema of the sum in the same equation which decreases the variance of that sum and therefore the error in the possible outcome of the equation. The error was 0, as expected, when $p_{cut} =1$. At $p_{cut} = 0.6$ the maximal load drops below $50\%$ of the value estimated in exercise 2. The confidence intervals are listed in table 2.
+
 \begin{table}[H] 
+\label{tbl:exercise3_CI}
 \centering 
 \begin{tabular}{|l|l|l|l|l|l|l|l|} 
 \hline 
 \input{dat/ex3-table-N200-Q50-C95.tex}	
 \hline
 \end{tabular}
-\label{tbl:exercise3_CI}
 \caption{Table giving the confidence intervals for all data points in figure \ref{fig:exercise3}.}
 \end{table} 
-
-With increasing $p_{cut}$ the maximal load decreases. At $p_{cut} = 0.6$ the maximal load drops below $50\%$ of the value estimated in exercise 2. The confidence intervals are listed in table \ref{tbl:exercise3_CI}.
+ 

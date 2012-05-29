@@ -1,2 +1,12 @@
 \section{Conclusion}
 
+\subsection{Summary}
+
+First of all a Hopfield network was implemented and tested for convergence towards a steady point. After the successful implementation of the Hopfield network, 	it's maximum capacity was estimated in exercise 1.3 with a complementary analysis of the change in error as the dictionary size increases. Subsequently the maximal load was defined as $\alpha_{N.max}=\frac{P_{N,max}}{N}$, a reference value which is no longer dependent on the pattern size N, which was estimated to 0.128. Lastly this report analysed the effect of cutting directed weights out of the Hebbian weight matrix, thereby removing it's symmetry, on the maximal load. This was first accomplished using a random cutting function and a given percentage of values to be cut. In a second phase, the Hopfield network was adapted in order to enforce Dale's law, which splits the pattern into a excitatory and inhibitory population. 
+
+\subsection{Analysis}
+
+The decline in the energy of the Hopfield network (see figure \ref{fig: Question 1.1}) shows that our network converged towards a steady point which is either the sought after pattern or its inverse.
+After having estimated the maximum number of patterns $P_{N,max}$ that could be stored in the network for $N=200$ to be 26, we found that it coincides quite well with the calculated value and that $P_{N,max}$ scaled linearly with the network size $N$. This motivates the definition of $\alpha_{N,max}$, as given in the exercise sheet, which remains steady for various sizes of $N$.
+In exercise 3 we analysed the robustness of the Hopfield network by introducing small errors in the Hebbian weight matrix through the random cutting of directed weights. As expected the mean maximal load ans its error decreased as $p_{cut}$ increased, with the error being 0 at $p_{cut}=1$. The mean maximal load is expected to decrease, because the range of the $sign$ function in equation \ref{eq: sequential dynamics} decreases as more and more weight are set to 0 in the Hebbian weight matrix. 
+Exercise 4 showed that enforcing Dale's law proves to be more efficient than a random cutting function in the region of $E \in [0 \ldots 0.4]$, and less efficient in its complimentary region. 

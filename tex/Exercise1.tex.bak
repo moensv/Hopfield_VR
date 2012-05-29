@@ -25,7 +25,7 @@ Implement the Hopfield network as described above. Shortly comment on your imple
 \paragraph*{}
 
 The Hopfield Network works by taking one of the $P$ patterns stored in the system with the index $\mu$ and flipping a certain percentage \texttt{flip$\_$ratio} of its pixels. The resulting pattern is then used as the pattern that is to be tested and the dynamics are run on that pattern. 
-In order to execute the source code of the Hopfield Network, one should first execute \texttt{h=HopfieldNetwork()} in order  to initialize the class. Then one can execute the class using \texttt{h.run()}. The  options of the \texttt{run} function are \texttt{N} (number of pixels), \texttt{P}  (number of patterns), \texttt{ratio} (fraction of $\xi_i=1$ in patterns), \texttt{mu} (pattern  chosen for modification and subsequent retrieval), \texttt{flip$\_$ratio} (fraction of pixels that are to be  changed when creating the retrieval pattern), \texttt{pcut} (the probability that a directed weight $\omega_{ij}$ is cut and set to 0), \texttt{excitatory} (sets disallowed connection weights in standard Hebbian to 0),\texttt{bPlot} (whether  a plot should be created) and \texttt{bDebug} (whether debugging tools should be turned  on).
+In order to execute the source code of the Hopfield Network, one should first execute \texttt{h=HopfieldNetwork()} in order  to initialize the class. Then one can execute the class using \texttt{h.run()}. The  options of the \texttt{run} function are \texttt{N} (number of pixels), \texttt{P}  (number of patterns), \texttt{ratio} (fraction of $S_i=1$ in patterns), \texttt{mu} (pattern  chosen for modification and subsequent retrieval), \texttt{flip$\_$ratio} (fraction of pixels that are to be  changed when creating the retrieval pattern), \texttt{pcut} (the probability that a directed weight $\omega_{ij}$ is cut and set to 0), \texttt{excitatory} (sets disallowed connection weights in standard Hebbian to 0),\texttt{bPlot} (whether  a plot should be created) and \texttt{bDebug} (whether additional debugging output should be turned  on).
 
 In figure \ref{fig: Question 1.1} the dynamics needed to retrieve the pattern with the above given settings are shown. The image shows the energy, the overlap and the normalized pixel distance which is explained in section \ref{ssec: Normalized Pixel Distance}. Not even one complete time-step was necessary in order to retrieve the pattern with a 100$\%$ overlap. During the retrieval, the energy function fell strongly, showing that we were approaching a stable condition. 
 \paragraph*{}
@@ -58,7 +58,7 @@ Set N = 200 and c = 0.1. Plot the mean retrieval error of a randomly chosen patt
 
 \end{itshape}
 
-\begin{figure}
+\begin{figure}[H]
   \vspace{-20pt}
   \begin{center}
     \includegraphics[width=0.9\textwidth]{dat/ex1_3-error_avg-N200-P50-Q500.png}

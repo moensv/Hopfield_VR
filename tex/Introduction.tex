@@ -29,7 +29,7 @@ There are many possible exit conditions to the dynamics. The most basic exit con
 When analysing just one pattern $\xi_i$, the stable condition becomes very simple and can be given by:
 
 \begin{equation}
-sign\left( \sum_j^N \omega_{ij} \xi_j \right) = \xi_j, \quad	\forall i
+sign\left( \sum_j^N \omega_{ij} \xi_j \right) = \xi_i, \quad	\forall i
 \end{equation}
 
 This is fulfilled for $\omega_{ij}=\frac{1}{N} \xi_i \xi_j$. This formalism retains the insensitivity of the Hopfield Network to minor errors in the pattern, since even if some pixels are wrong, as long as it is less then half the pixels, equation \ref{eq: sequential dynamics} will still give the correct result and produce $\xi_i$. $\xi_i$ is therefore called an \textbf{attractor}. For each attractor there must be a second attractor called the \textbf{reversed state} $-\xi$, which is reached when more than half of the pixels have an error. 
@@ -41,9 +41,11 @@ When trying to recall the most similar pattern out of several patterns, we can d
 \end{equation}
 This weight matrix is often called the "Hebb rule" or "generalized Hebb rule" \citep{Polk:2002fk}. Networks using this weight system with binary units and asynchronous updating are called a Hopfield Network. 
 
+\begin{comment}
 \subsection{Crosstalk Term}
 
 If we define equation \ref{eq: sequential dynamics} for a specific pattern $\nu$ in $p$ patterns, we can write:
 \begin{equation}
 \xi_i^\nu = sign(h_i^\nu), \quad h_i^\nu = \frac{1}{N} \sum_j \sum_\mu \xi_i^\mu \xi_j^\mu \xi_j^\nu = \xi_i^\nu + \underset{\mbox{Crosstalk Term}}{\underbrace{\frac{1}{N} \sum_j \sum_{\mu \neq \nu} \xi_i^\mu \xi_j^\mu \xi_j^\nu}}, \quad \forall i
 \end{equation}
+\end{comment}
