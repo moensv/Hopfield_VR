@@ -24,13 +24,13 @@
 \title{Miniproject: Robustness of storage capacity in more realistic Hopfield networks}
 \author{Reinhold Bertram \\ 
 Vince Moens \\ 	
-{\it \large EPF Lausanne}\\
+{\it \large EPFL}\\
 \vspace{0.5cm}\\
 {\textbf{Assistant:} }\\
-{Alex Seeholzer}\\
+{Alex Seeholzer, \textit{EPFL}}\\
 \\
 {\textbf{Supervised by:}}\\
-{Prof. Wulfram Gerstner, EPF Lausanne}
+{Prof. Wulfram Gerstner, \textit{EPFL}}
 }
 \date{\today}
 
@@ -47,10 +47,10 @@ Vince Moens \\
 
 \maketitle
 \thispagestyle{empty}
-\vspace*{3 cm}
+\vspace*{5 cm}
 
 \input{Abstract}
-
+\vspace*{0.5cm}
 \begin{figure}
 \centering
 \subfigure{\includegraphics[width=0.2\textwidth]{EPFL_LOG_QUADRI_Red.eps}}
