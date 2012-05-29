@@ -27,7 +27,7 @@ def exercise4(N=200, c=0.1, numint=11, tests=10, confidence=0.95):
                 confidence=confidence, excitatory=e)
         i += 1
 
-    alpha_null = 0.128
+    alpha_null = 0.1278
 
     fig = figure()
     ax1 = fig.add_subplot(111)

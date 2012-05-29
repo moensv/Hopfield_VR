@@ -19,12 +19,10 @@ Note: Bare in mind that the convergence assertion of Question 1.1 does not neces
     \includegraphics[width=0.6\textwidth]{dat/ex3-mean_max_load-N200-Q50-C95}
   \end{center}
   \vspace{-20pt}
-  \caption{Exercise 3: Maximal load $\alpha_{N,max}$ averaged over 10 repetitions for varying $p_{cut}$ }
+  \caption{Exercise 3: Maximal load $\alpha_{N,max}$ averaged over 10 repetitions for varying $p_{cut}$. The data is normalized to the values of $\alpha_{N,max}=0.1278$ found in exercise 2. }
   \label{fig:exercise3}
   \vspace{-10pt}
 \end{figure}
-
-Figure \ref{fig:exercise3} shows the the $\alpha_{N,max}$ over varying $p_{cut}$ normalized to the value of $\alpha_{N,max}=0.1278$ found in exercise 2.
 
 \begin{table}[H] 
 \centering 
